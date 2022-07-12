@@ -1,4 +1,6 @@
-/* (calcular precio con descuentos e iva)
+
+/*                          ///CALCULAR PRECIOS CON DESCUENTO E IVA//
+
 const suma = (a , b , c) => a + b + c
 const resta = (a , b) => a - b 
 
@@ -11,6 +13,7 @@ let precioFinal = resta (suma(precioAereo , clasePremium , iva (precioAereo)) , 
 console.log(precioFinal)
 */
 
+/*
 const nombre = prompt("Ingrese nombre y apellido")
 const suma = (a , b , c) => a + b + c
 const resta = (a , b) => a - b 
@@ -55,6 +58,68 @@ else{
     precioFinal = resta (suma(precioAereo, iva (precioAereo), cero) , descuento)
     alert("el precio final es de  " + precioFinal)
 }
+*/
+                //AGREGAR DESTINOS Y PUSHEARLOS SI NO ESTAN EN LA LISTA//
+
+// let destino = ["roma", "londres", "paris", "amsterdam", "bruselas", "viena", "estocolmo", "praga", "varsovia", "lisboa", "oslo"]
+
+// console.log(destino);
+
+// let destinoNuevo = prompt("elija un destino europeo y les buscaremos las mejores ofertas")
+// if (destino.includes (destinoNuevo)){
+//     alert("El destino ya esta se encuentra en la lista")
+//     destinoNuevo = prompt("elija un destino europeo y les buscaremos las mejores ofertas")
+// }
+
+// else (destino.indexOf (destinoNuevo) == -1) ; {
+//     destino.push (destinoNuevo);
+//     console.log (destino);
+
+// }
+
+                        //ELIMINAR DESTINOS//
+
+// let destino = ["roma", "londres", "paris", "amsterdam", "bruselas", "viena", "estocolmo", "praga", "varsovia", "lisboa", "oslo"]
+
+// const eliminar = prompt ("que ciudad desea eliminar de la lista?") 
+// let index = destino.indexOf(eliminar)
+// if (index != -1) {
+//     destino.splice (index, 1)
+  
+// }
+// console.log(destino)
+
+                            //arrays + objetos (for...of)
+
+class destinos {
+    constructor(ciudad, precio){
+        this.ciudad = ciudad;
+        this.precio = precio;
+
+    }
+  
+}
+let listaDestinos = [
+    {ciudad: "roma", precio: 500 },
+    {ciudad: "londres", precio: 550 },
+    {ciudad: "paris", precio: 400 },
+    {ciudad: "amsterdam", precio: 470 },
+    {ciudad: "bruselas", precio: 560 },
+    {ciudad: "viena", precio: 580 },
+    {ciudad: "estocolmo", precio: 520 },
+    {ciudad: "praga", precio: 480 },
+    {ciudad: "varsovia", precio: 390 },
+    {ciudad: "lisboa", precio: 510 },
+    {ciudad: "oslo", precio: 600 },
+
+];
+for (let destinos of listaDestinos)
+{
+    console.log(`su destino es ${destinos.ciudad} y su precio es de ${destinos.precio}`);
+}
+
+
+
 
 
 
