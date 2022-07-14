@@ -2,8 +2,30 @@
     margin:0;
     padding: 0;
 }
+h1 {
+  font-size: 1.6em;
+  color: #DFEEEA;
+  font-family: 'Courgette', cursive, sans-serif;
+  height: fit-content;
+  text-align: center; }
+  h2{
+    color: black;
+    text-align: center;
+    font-family: 'Courgette', cursive, sans-serif;
+    font-size: 1.6em;
+  }
 
+  a {
+  color: #ffffff;
+  text-decoration: none; }
 
+nav{
+  background-color: rgb(73, 105, 0);
+}
+footer{
+  background-color:rgb(73, 105, 0) ;
+  height: 100px;
+}
 
 
 .container {  display: grid;
@@ -14,9 +36,12 @@
     max-width: 1200px;
     justify-content: center;
     flex-wrap: wrap;
+    
   }
   
+  
   .main-container { grid-area: 1 / 1 / 6 / 4;
+
 
 }
   
