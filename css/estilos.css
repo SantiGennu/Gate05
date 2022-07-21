@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; }
+
+a {
+    text-decoration: none;
+}
+
+header{
+    background-color: #333366;
+    align-items: center;
+}
+.navbar{
+    height: 200px;
+}
+.logo{
+    margin: 10px;
+    width: 200px;
+    height: 200px; 
+}
+.footer{
+    background-color: #333366;
+}
+ul li a {
+    color: white;
+}
+ul li a:hover{
+    color: #FFFF33;
+}
+.btn {
+    height: 40px;
+    margin-right: 10px;
+    color: #fff;
+    background-color: #333366;
+    
+}
+.btn:hover{
+    background-color: #FFFF33;
+    border-color:rgb(27, 17, 18)
+}
+.btn img {
+    width: 28px; height: 28px;
+}
+
