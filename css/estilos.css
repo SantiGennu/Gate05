@@ -1,45 +1,144 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; }
-
+    box-sizing: border-box;
+}
+p{
+    color: #001E6C;
+}
+h1{
+    color:#001E6C;
+    text-align: center;
+}
+h2{
+    color: #001E6C;
+    text-align: center;
+}
 a {
     text-decoration: none;
+  
+}
+.gate05{
+    color: #FCD900;
+    font-weight: 800;
+    text-shadow: 4px -4px 5px #001E6C;
+
 }
 
-header{
-    background-color: #333366;
+.container{
+    background-color: #d1d1d1;
+}
+
+header {
+    background-color: #001E6C;
     align-items: center;
 }
-.navbar{
+
+.navbar {
     height: 200px;
 }
-.logo{
+
+.logo {
     margin: 10px;
     width: 200px;
-    height: 200px; 
+    height: fit-content;
 }
-.footer{
-    background-color: #333366;
+
+.footer {
+    background-color: #001E6C;
+    height: 150px;
 }
+
 ul li a {
-    color: white;
+    color: #FCD900;
 }
-ul li a:hover{
-    color: #FFFF33;
+
+ul li a:hover {
+    color: #FCD900;
 }
+
 .btn {
     height: 40px;
     margin-right: 10px;
-    color: #fff;
-    background-color: #333366;
+    color:#FCD900;
+    background-color: #001E6C;
+    display: flex;
     
-}
-.btn:hover{
-    background-color: #FFFF33;
-    border-color:rgb(27, 17, 18)
-}
-.btn img {
-    width: 28px; height: 28px;
+
 }
 
+.btn:hover {
+    background-color: #FCD900;
+    border-color: rgb(27, 17, 18)
+}
+
+.btn img {
+    width: 28px;
+    height: 28px;
+}
+
+.modal-content {
+    background-color: #FCD900;
+}
+
+.d-flex {
+    justify-content: center
+}
+
+.d-flex p {
+    font-size: 1.2em;
+    color: #333366;
+    font-weight: 600;
+}
+#cantidadCarrito{
+    color: #FCD900;
+}
+
+.close {
+    background-color: #001E6C;
+    color: #fff;
+}
+
+.remove-btn {
+    background-color: #001E6C;
+    color: white;
+}
+
+.modal-header {
+    background-color:#001E6C;
+    color: #FCD900;
+}
+
+.modal-footer {
+    background-color:#001E6C;
+    color: #FCD900;
+}
+
+.card-img-top {
+    height: 22rem;
+    width: 18rem;
+}
+
+.card-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    background-color: #FCD900;
+}
+.card-body h4{
+    color: #333366;
+}
+.precio{
+    font-weight: 700;
+    font-size: 1.2em;
+    color: #333366;
+
+}
+.precioProducto{
+color: #FCD900;
+}
+.busqueda{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
