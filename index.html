@@ -17,16 +17,11 @@
 <body class="container background ">
 
 
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.html"><img src="./img/logo (1).png" class="logo img-fluid "
-                        id="logo" alt="" /></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav"></div>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div>
+                <a class="navbar-brand" href="index.html"><img src="./img/logo (1).png" class="logo"
+                    id="logo" alt="" /></a>
             </div>
             <button type="button" class="btn " id="boton2" data-toggle="modal" data-target="#exampleModal">
                 <span class="material-icons">
@@ -34,9 +29,26 @@
                 </span>
                 <p id="cantidadCarrito">0</p>
             </button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse flex-grow-0" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                    <li class="menuItem">
+                        <a href="./index.html" class="menuLink">Inicio</a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="#packs" class="menuLink">Packs</a>
+                    </li>
+                
+              </ul>
+            </div>
+          </div>
         </nav>
+
     </header>
-    <main>
+    <main class="main">
 
         <h1> Bienvenidos a <Span class="gate05">Gate05</Span>
             la compania aerea que piensa en usted
@@ -62,41 +74,138 @@
 
             </div>
             <div class="busqueda">
-            <h2>Descubre tu destino ideal </h2>
-           
+                <h2>Descubre tu destino ideal </h2>
+
                 <input type="text" name="searchBar" id="searchBar" placeholder="    Busca tu destino" />
             </div>
-                <div>
-                    <div class="container row" id="contenedorDestinos">
-
-                    </div>
+            <div>
+                <div class="container row" id="contenedorDestinos">
 
                 </div>
-                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-                    aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Carrito de compras</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body row" id="contenedorCarrito">
 
-                            </div>
-                            <div class="modal-footer">
-                                <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
-                                <button type="button" class="btn " data-dismiss="modal" id="botonCerrar">Close</button>
-                            </div>
+            </div>
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Carrito de compras</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body row" id="contenedorCarrito">
+
+                        </div>
+                        <div class="modal-footer">
+                            <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
+                            <button type="button" class="btn " data-dismiss="modal" id="botonCerrar">Close</button>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="separador">
+            <div></div>
+        </div>
+        <section id="packContainer" class="packContainer">
+            <div class="modalPack" id="packs">
+                <div class="backgroundPack">
+                    <div id="background1Spain">
+                        <h3> Madrid</h3>
+                    </div>
+                    <div id="background2Spain">
+                        <h3> Barcelona</h3>
+                    </div>
+                    <div id="background3Spain">
+                        <h3> Mallorca</h3>
+                    </div>
+                </div>
+                <div class="contentPack" >
+                    <div class="titlePack">
+                        <h1>SPAIN PACK</h1>
+                    </div>
+                    <div class="blockPack">
+                        <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias ab ut perferendis inventore
+                            suscipit, atque temporibus totam voluptatibus doloribus praesentium</P>
+                        <p class="pricePack">
+                            <strong> Only $1150</strong>
+                        </p>
+                        <button onclick="agregarCarrito()" class="btnReserve" type="button"> RESERVE </button>
+                    </div>
+
+                </div> 
+
+            </div>
+            <div class="modalPack">
+                <div class="backgroundPack">
+                    <div id="background1France">
+                        <h3> Paris</h3>
+                    </div>
+                    <div id="background2France">
+                        <h3> Marsella</h3>
+                    </div>
+                    <div id="background3France">
+                        <h3> Lyon</h3>
+                    </div>
+                </div>
+                <div class="contentPack" >
+                    <div class="titlePack"> 
+                       <h1>FRANCE PACK</h1>
+                    </div>
+                    <div class="blockPack">
+                        <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias ab ut perferendis inventore
+                            suscipit, atque temporibus totam voluptatibus doloribus praesentium</P>
+                        <p class="pricePack">
+                            <strong> Only $1230</strong>
+                        </p>
+                        <button onclick="agregarCarrito()" id="btn-pack" type="button"> RESERVE </button>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="modalPack">
+                <div class="backgroundPack">
+                    <div id="background1Italy">
+                        <h3> Venecia</h3>
+                    </div>
+                    <div id="background2Italy">
+                        <h3> Turin</h3>
+                    </div>
+                    <div id="background3Italy">
+                        <h3> Roma</h3>
+                    </div>
+                </div>
+                <div class="contentPack">
+                    <div class="titlePack">
+                        <h1>ITALY PACK</h1>
+                    </div>
+                    <div class="blockPack">
+                        <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias ab ut perferendis inventore
+                            suscipit, atque temporibus totam voluptatibus doloribus praesentium</P>
+                        <p class="pricePack">
+                            <strong> Only $1300</strong>
+                        </p>
+                        <button onclick="agregarCarrito()" class="btnReserve" type="button" >
+                           RESERVE
+                          </button>
+                          
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+      
+  
     </main>
 
     <footer class="footer ">
 
     </footer>
+    <script src="sweetalert2.all.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>

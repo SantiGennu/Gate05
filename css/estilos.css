@@ -29,11 +29,39 @@ a {
     background-color: #d1d1d1;
 }
 
-header {
+.header {
+    display: grid;
     background-color: #001E6C;
     align-items: center;
+    align-content: center;
+   
+}
+#navbarNav{
+    background-color: #001E6C;
+    padding-bottom: 20px;
+    
 }
 
+
+.navbar {
+    background-color: #001E6C !important;
+    justify-content: space-between;
+
+}.menuItem{
+    padding-inline: 20px;
+}
+.menuLink{
+
+    color: #FCD900;
+}
+
+
+.navbar-collapse {
+    text-align: center; }
+  
+  nav ul {
+    list-style: none; }
+  
 .navbar {
     height: 200px;
 }
@@ -43,6 +71,9 @@ header {
     width: 200px;
     height: fit-content;
 }
+main{
+    padding-top: 50px;
+}
 
 .footer {
     background-color: #001E6C;
@@ -51,6 +82,7 @@ header {
 
 ul li a {
     color: #FCD900;
+    font-size: 1.2em;
 }
 
 ul li a:hover {
@@ -103,6 +135,10 @@ ul li a:hover {
     background-color: #001E6C;
     color: white;
 }
+#booking{
+    background-color: #001E6C;
+    color: #FCD900;
+}
 
 .modal-header {
     background-color:#001E6C;
@@ -141,4 +177,278 @@ color: #FCD900;
     display: flex;
     align-items: center;
     flex-direction: column;
+}
+#vacio{
+    font-weight: 600;
+    font-size: 1.1;
+    font-family: sans-serif;
+    color: #001E6C;
+    text-align: center;
+}
+.separador{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+    }
+    .separador div {
+        height: 1px;
+        width: 65vw;
+        max-width: 100%;
+        border-top: 2px solid rgba(8, 2, 2, 0.5);
+        border-radius: 20px;
+    }
+.packContainer{
+    padding-top: 50px;
+}
+.packContainer .modalPack {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 40px;
+}
+.packContainer .modalPack .backgroundPack {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+}
+.packContainer .modalPack .backgroundPack #background1Spain {
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    width: 33%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../img/madrid.jpg);
+}
+.packContainer .modalPack .backgroundPack #background1Spain h3 {
+    font-weight: 500;
+    margin-top: 50px;
+    font-size: 24px;
+    font-family: 'Poppins';
+    color: rgb(11, 6, 6);
+    opacity: 50%;
+    transition: all .5s;
+    cursor: default;
+}
+.packContainer .modalPack .backgroundPack #background2Spain {
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    width: 33%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../img/barcelona.jpg);
+}
+.packContainer .modalPack .backgroundPack #background2Spain h3 {
+    font-weight: 500;
+    margin-top: 50px;
+    font-size: 24px;
+    font-family: 'Poppins';
+    color: rgb(11, 6, 6);
+    opacity: 50%;
+    transition: all .5s;
+    cursor: default;
+}
+.packContainer .modalPack .backgroundPack #background3Spain {
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    width: 33%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../img/Mallorca.jpg);
+}
+.packContainer .modalPack .backgroundPack #background3Spain h3 {
+    font-weight: 800;
+    margin-top: 50px;
+    font-size: 24px;
+    font-family: 'Poppins';
+    color:black;
+    transition: all .5s;
+    cursor: default;
+}
+
+
+.packContainer .modalPack .contentPack {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+}
+.packContainer .modalPack .contentPack .titlePack {
+    width: 45%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    border-bottom: 2px solid #FCD900;
+}
+.packContainer .modalPack .contentPack .titlePack h1 {
+font-family: 'Renogare';
+font-size: 80px;
+font-weight: 400;
+color: #FCD900;
+text-align: center;
+background-color: #001E6C;
+opacity: 80%;
+}
+.packContainer .modalPack .contentPack .blockPack {
+    background-color: #001E6C;
+    padding-block: 40px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 0px 0px 20px 20px;
+    width: 40%;
+    transition: all .5s;
+    opacity: 80%;
+}
+.packContainer .modalPack .contentPack .blockPack p {
+    width: 70%;
+    color: #FCD900;
+    font-size: 18px;
+    opacity: 80%;
+
+}
+
+.packContainer .modalPack .contentPack .blockPack button {
+    border: solid 3px #FCD900;
+    background-color: #FCD900;
+    background-repeat: no-repeat;
+    font-family: 'Renogare';
+    color: #001E6C;
+    font-size: 18px;
+    padding-block: 12px;
+    padding-inline: 47px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all .3s;
+}
+.packContainer .modalPack .backgroundPack #background1Italy {
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    width: 33%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../img/venecia1.jpg);
+}
+.packContainer .modalPack .backgroundPack #background1Italy h3 {
+    font-weight: 500;
+    margin-top: 50px;
+    font-size: 24px;
+    font-family: 'Poppins';
+    color: rgb(11, 6, 6);
+    opacity: 50%;
+    transition: all .5s;
+    cursor: default;
+}
+.packContainer .modalPack .backgroundPack #background2Italy {
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    width: 33%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../img/turin.jpg);
+}
+.packContainer .modalPack .backgroundPack #background2Italy h3 {
+    font-weight: 500;
+    margin-top: 50px;
+    font-size: 24px;
+    font-family: 'Poppins';
+    color: rgb(11, 6, 6);
+    opacity: 50%;
+    transition: all .5s;
+    cursor: default;
+}
+.packContainer .modalPack .backgroundPack #background3Italy {
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    width: 33%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../img/ROMA.jpg);
+}
+.packContainer .modalPack .backgroundPack #background3Italy h3 {
+    font-weight: 800;
+    margin-top: 50px;
+    font-size: 24px;
+    font-family: 'Poppins';
+    color:black;
+    transition: all .5s;
+    cursor: default;
+}
+.packContainer .modalPack .backgroundPack #background1France {
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    width: 33%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../img/paris.jpg);
+}
+.packContainer .modalPack .backgroundPack #background1France h3 {
+    font-weight: 500;
+    margin-top: 50px;
+    font-size: 24px;
+    font-family: 'Poppins';
+    color: rgb(11, 6, 6);
+    opacity: 50%;
+    transition: all .5s;
+    cursor: default;
+}
+.packContainer .modalPack .backgroundPack #background2France {
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    width: 33%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../img/marsella.jpg);
+}
+.packContainer .modalPack .backgroundPack #background2France h3 {
+    font-weight: 500;
+    margin-top: 50px;
+    font-size: 24px;
+    font-family: 'Poppins';
+    color: rgb(11, 6, 6);
+    opacity: 50%;
+    transition: all .5s;
+    cursor: default;
+}
+.packContainer .modalPack .backgroundPack #background3France {
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    width: 33%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../img/lyon.jpeg);
+}
+.packContainer .modalPack .backgroundPack #background3France h3 {
+    font-weight: 800;
+    margin-top: 50px;
+    font-size: 24px;
+    font-family: 'Poppins';
+    color:black;
+    transition: all .5s;
+    cursor: default;
 }
