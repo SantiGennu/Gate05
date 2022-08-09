@@ -28,16 +28,12 @@ const destino14 = new Destinos("SofÍa", 470, "../img/sofia.jpg", 14)
 const destino15 = new Destinos("Dublin", 500, "../img/dublin.jpg", 15)
 const destino16 = new Destinos("Turin", 420, "../img/turin.jpg", 16)
 const destino17 = new Destinos("Hamburgo", 550, "../img/hamburgo.jpg", 17)
-const destino18 = new Destinos("Mallorca", 610, "../img/Mallorca.jpg", 17)
+const destino18 = new Destinos("Mallorca", 610, "../img/Mallorca.jpg", 18)
 const destino19 = new Destinos("Marsella", 650, "../img/marsella.jpg", 19)
 const destino20 = new Destinos("Atenas", 575, "../img/atenas-8.jpg", 20)
 const destino21 = new Destinos("Venecia", 520, "../img/venecia1.jpg", 21)
 const destino22 = new Destinos("Barcelona", 480, "../img/barcelona.jpg", 22)
 const destino23 = new Destinos("Lyon", 540, "../img/lyon.jpeg", 23)
-const destino24 = new Destinos("PackSpain", 1150, "../img/lyon.jpeg",24)
-const destino25 = new Destinos("packFrance", 1239, "../img/lyon.jpeg",25)
-const destino26 = new Destinos("packItaly", 1300, "../img/lyon.jpeg",26)
-
 
 
 
@@ -51,5 +47,3 @@ console.log(listaDestinos)
 let ofertaDestinos= [destino9, destino13, destino8];
 console.log(ofertaDestinos)
 
-let listaPack =[ destino24, destino25, destino26]
-console.log(listaPack)

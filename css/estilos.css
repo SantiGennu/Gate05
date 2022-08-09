@@ -452,3 +452,46 @@ opacity: 80%;
     transition: all .5s;
     cursor: default;
 }
+.container-quotes {
+    margin: 100px auto;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .quote-box {
+    border: 2px solid #001E6C;
+    padding: 30px 20px;
+    margin-bottom: 20px;
+  }
+  #quote {
+    color: #001E6C;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  #author {
+    float: right;
+    color: #001E6C;
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 10px;
+  }
+  
+  #btnQuote {
+    align-self: center;
+    border: 2px solid #001E6C;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    color:#001E6C;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #FCD900;
+  }
+  
+  #btnQuote:focus {
+    outline: none;
+  }
+  #quoteDay{
+    align-items: center;
+    justify-content: center;
+  }

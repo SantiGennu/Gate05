@@ -54,6 +54,16 @@
             la compania aerea que piensa en usted
         </h1>
         </div>
+
+        <div class="container-quotes">
+            <div class="quote-box">
+            <p id="quote">Quote of the day...</p>
+            <small id="author"> Author</small>
+        </div>
+        <button id="btnQuote">New Quote</button>
+
+        </div>
+
         <div>
             <h2> Ofertas semanales
             </h2>
@@ -73,6 +83,9 @@
                 </p>
 
             </div>
+            <div class="separador">
+                <div></div>
+            </div>
             <div class="busqueda">
                 <h2>Descubre tu destino ideal </h2>
 
@@ -83,7 +96,7 @@
 
                 </div>
 
-            </div>
+        
             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog" role="document">
@@ -109,102 +122,14 @@
             <div></div>
         </div>
         <section id="packContainer" class="packContainer">
-            <div class="modalPack" id="packs">
-                <div class="backgroundPack">
-                    <div id="background1Spain">
-                        <h3> Madrid</h3>
-                    </div>
-                    <div id="background2Spain">
-                        <h3> Barcelona</h3>
-                    </div>
-                    <div id="background3Spain">
-                        <h3> Mallorca</h3>
-                    </div>
-                </div>
-                <div class="contentPack" >
-                    <div class="titlePack">
-                        <h1>SPAIN PACK</h1>
-                    </div>
-                    <div class="blockPack">
-                        <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias ab ut perferendis inventore
-                            suscipit, atque temporibus totam voluptatibus doloribus praesentium</P>
-                        <p class="pricePack">
-                            <strong> Only $1150</strong>
-                        </p>
-                        <button onclick="agregarCarrito()" class="btnReserve" type="button"> RESERVE </button>
-                    </div>
-
-                </div> 
-
-            </div>
-            <div class="modalPack">
-                <div class="backgroundPack">
-                    <div id="background1France">
-                        <h3> Paris</h3>
-                    </div>
-                    <div id="background2France">
-                        <h3> Marsella</h3>
-                    </div>
-                    <div id="background3France">
-                        <h3> Lyon</h3>
-                    </div>
-                </div>
-                <div class="contentPack" >
-                    <div class="titlePack"> 
-                       <h1>FRANCE PACK</h1>
-                    </div>
-                    <div class="blockPack">
-                        <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias ab ut perferendis inventore
-                            suscipit, atque temporibus totam voluptatibus doloribus praesentium</P>
-                        <p class="pricePack">
-                            <strong> Only $1230</strong>
-                        </p>
-                        <button onclick="agregarCarrito()" id="btn-pack" type="button"> RESERVE </button>
-                    </div>
-
-                </div>
-
-            </div>
-            <div class="modalPack">
-                <div class="backgroundPack">
-                    <div id="background1Italy">
-                        <h3> Venecia</h3>
-                    </div>
-                    <div id="background2Italy">
-                        <h3> Turin</h3>
-                    </div>
-                    <div id="background3Italy">
-                        <h3> Roma</h3>
-                    </div>
-                </div>
-                <div class="contentPack">
-                    <div class="titlePack">
-                        <h1>ITALY PACK</h1>
-                    </div>
-                    <div class="blockPack">
-                        <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias ab ut perferendis inventore
-                            suscipit, atque temporibus totam voluptatibus doloribus praesentium</P>
-                        <p class="pricePack">
-                            <strong> Only $1300</strong>
-                        </p>
-                        <button onclick="agregarCarrito()" class="btnReserve" type="button" >
-                           RESERVE
-                          </button>
-                          
-                    </div>
-
-                </div>
-
-            </div>
+           
         </section>
-      
   
     </main>
 
     <footer class="footer ">
 
     </footer>
-    <script src="sweetalert2.all.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -219,6 +144,7 @@
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
     <script src="./js/destinos.js"></script>
+    <script src="./js/pack.js"></script>
     <script src="./js/codigo.js"></script>
 </body>
 
