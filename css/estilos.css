@@ -122,7 +122,7 @@ ul li a:hover {
     color: #333366;
     font-weight: 600;
 }
-#cantidadCarrito{
+#quantityCart{
     color: #FCD900;
 }
 
@@ -164,35 +164,36 @@ ul li a:hover {
 .card-body h4{
     color: #333366;
 }
-.precio{
+.price{
     font-weight: 700;
     font-size: 1.2em;
     color: #333366;
 
 }
-.precioProducto{
+
+.priceProduct{
 color: #FCD900;
 }
-.busqueda{
+.serch{
     display: flex;
     align-items: center;
     flex-direction: column;
 }
-#vacio{
+#empty{
     font-weight: 600;
     font-size: 1.1;
     font-family: sans-serif;
     color: #001E6C;
     text-align: center;
 }
-.separador{
+.divider{
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     padding-top: 40px;
     }
-    .separador div {
+    .divider div {
         height: 1px;
         width: 65vw;
         max-width: 100%;
@@ -217,7 +218,7 @@ color: #FCD900;
     flex-direction: row;
     justify-content: center;
 }
-.packContainer .modalPack .backgroundPack #background1Spain {
+.packContainer .modalPack .backgroundPack #background1 {
     height: 100%;
     display: grid;
     justify-content: center;
@@ -227,17 +228,16 @@ color: #FCD900;
     background-position: center;
     background-image: url(../img/madrid.jpg);
 }
-.packContainer .modalPack .backgroundPack #background1Spain h3 {
+.packContainer .modalPack .backgroundPack #background1 h3 {
     font-weight: 500;
     margin-top: 50px;
     font-size: 24px;
     font-family: 'Poppins';
-    color: rgb(11, 6, 6);
-    opacity: 50%;
+    color: black;
     transition: all .5s;
     cursor: default;
 }
-.packContainer .modalPack .backgroundPack #background2Spain {
+.packContainer .modalPack .backgroundPack #background2 {
     height: 100%;
     display: grid;
     justify-content: center;
@@ -247,17 +247,16 @@ color: #FCD900;
     background-position: center;
     background-image: url(../img/barcelona.jpg);
 }
-.packContainer .modalPack .backgroundPack #background2Spain h3 {
-    font-weight: 500;
+.packContainer .modalPack .backgroundPack #background2 h3 {
+    font-weight:800px;
     margin-top: 50px;
     font-size: 24px;
     font-family: 'Poppins';
-    color: rgb(11, 6, 6);
-    opacity: 50%;
+    color: black;
     transition: all .5s;
     cursor: default;
 }
-.packContainer .modalPack .backgroundPack #background3Spain {
+.packContainer .modalPack .backgroundPack #background3{
     height: 100%;
     display: grid;
     justify-content: center;
@@ -267,7 +266,7 @@ color: #FCD900;
     background-position: center;
     background-image: url(../img/Mallorca.jpg);
 }
-.packContainer .modalPack .backgroundPack #background3Spain h3 {
+.packContainer .modalPack .backgroundPack #background3 h3 {
     font-weight: 800;
     margin-top: 50px;
     font-size: 24px;
@@ -334,7 +333,7 @@ opacity: 80%;
     cursor: pointer;
     transition: all .3s;
 }
-.packContainer .modalPack .backgroundPack #background1Italy {
+.packContainer .modalPack .backgroundPack #background1{
     height: 100%;
     display: grid;
     justify-content: center;
@@ -342,19 +341,18 @@ opacity: 80%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-image: url(../img/venecia1.jpg);
+    /* background-image: url(../img/venecia1.jpg); */
 }
-.packContainer .modalPack .backgroundPack #background1Italy h3 {
-    font-weight: 500;
+.packContainer .modalPack .backgroundPack #background1 h3 {
+    font-weight: 800;
     margin-top: 50px;
     font-size: 24px;
     font-family: 'Poppins';
-    color: rgb(11, 6, 6);
-    opacity: 50%;
+    color: black;
     transition: all .5s;
     cursor: default;
 }
-.packContainer .modalPack .backgroundPack #background2Italy {
+.packContainer .modalPack .backgroundPack #background2 {
     height: 100%;
     display: grid;
     justify-content: center;
@@ -362,19 +360,18 @@ opacity: 80%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-image: url(../img/turin.jpg);
+    /* background-image: url(../img/turin.jpg); */
 }
-.packContainer .modalPack .backgroundPack #background2Italy h3 {
-    font-weight: 500;
+.packContainer .modalPack .backgroundPack #background2 h3 {
+    font-weight: 800;
     margin-top: 50px;
     font-size: 24px;
     font-family: 'Poppins';
-    color: rgb(11, 6, 6);
-    opacity: 50%;
+    color: black;
     transition: all .5s;
     cursor: default;
 }
-.packContainer .modalPack .backgroundPack #background3Italy {
+.packContainer .modalPack .backgroundPack #background3 {
     height: 100%;
     display: grid;
     justify-content: center;
@@ -382,9 +379,9 @@ opacity: 80%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-image: url(../img/ROMA.jpg);
+    /* background-image: url(../img/ROMA.jpg); */
 }
-.packContainer .modalPack .backgroundPack #background3Italy h3 {
+.packContainer .modalPack .backgroundPack #background3y h3 {
     font-weight: 800;
     margin-top: 50px;
     font-size: 24px;
@@ -393,7 +390,7 @@ opacity: 80%;
     transition: all .5s;
     cursor: default;
 }
-.packContainer .modalPack .backgroundPack #background1France {
+.packContainer .modalPack .backgroundPack #background1 {
     height: 100%;
     display: grid;
     justify-content: center;
@@ -401,19 +398,18 @@ opacity: 80%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-image: url(../img/paris.jpg);
+    /* background-image: url(../img/paris.jpg); */
 }
-.packContainer .modalPack .backgroundPack #background1France h3 {
-    font-weight: 500;
+.packContainer .modalPack .backgroundPack #background1 h3 {
+    font-weight: 800;
     margin-top: 50px;
     font-size: 24px;
     font-family: 'Poppins';
-    color: rgb(11, 6, 6);
-    opacity: 50%;
+    color: black;
     transition: all .5s;
     cursor: default;
 }
-.packContainer .modalPack .backgroundPack #background2France {
+.packContainer .modalPack .backgroundPack #background2 {
     height: 100%;
     display: grid;
     justify-content: center;
@@ -421,19 +417,18 @@ opacity: 80%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-image: url(../img/marsella.jpg);
+    /* background-image: url(../img/marsella.jpg); */
 }
-.packContainer .modalPack .backgroundPack #background2France h3 {
-    font-weight: 500;
+.packContainer .modalPack .backgroundPack #background2 h3 {
+    font-weight: 800;
     margin-top: 50px;
     font-size: 24px;
     font-family: 'Poppins';
-    color: rgb(11, 6, 6);
-    opacity: 50%;
+    color: black;
     transition: all .5s;
     cursor: default;
 }
-.packContainer .modalPack .backgroundPack #background3France {
+.packContainer .modalPack .backgroundPack #background3 {
     height: 100%;
     display: grid;
     justify-content: center;
@@ -441,9 +436,9 @@ opacity: 80%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-image: url(../img/lyon.jpeg);
+    /* background-image: url(../img/lyon.jpeg); */
 }
-.packContainer .modalPack .backgroundPack #background3France h3 {
+.packContainer .modalPack .backgroundPack #background3 h3 {
     font-weight: 800;
     margin-top: 50px;
     font-size: 24px;

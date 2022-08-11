@@ -1,8 +1,8 @@
 
-class Destinos {
-    constructor(ciudad, precio, img, id) {
-        this.ciudad = ciudad;
-        this.precio = precio;
+class Destination {
+    constructor(city, price, img, id) {
+        this.city = city;
+        this.price = price;
         this.img = img;
         this.id = id;
 
@@ -11,39 +11,38 @@ class Destinos {
 
 }
 
-const destino1 = new Destinos("Roma", 500, "./img/ROMA.jpg", 1)
-const destino2 = new Destinos("Londres", 550, "./img/london.jpg", 2)
-const destino3 = new Destinos("ParÍs", 400, "./img/paris.jpg", 3)
-const destino4 = new Destinos("Amsterdam", 470, "../img/amsterdam.jpg", 4)
-const destino5 = new Destinos("Bruselas", 560, "../img/bruselas.jpg", 5)
-const destino6 = new Destinos("Viena", 580, "../img/viena.jpg", 6)
-const destino7 = new Destinos("Estocolmo", 520,"../img/estocolmo.jpg", 7)
-const destino8 = new Destinos("Praga", 345, "../img/praga.jpg", 8)
-const destino9 = new Destinos("Varsovia", 330, "../img/varsovia.jpg", 9)
-const destino10 = new Destinos("Lisboa", 510, "../img/lisboa.jpg", 10)
-const destino11 = new Destinos("Oslo", 600, "../img/oslo.jpg", 11)
-const destino12 = new Destinos("Madrid", 425, "../img/madrid.jpg", 12)
-const destino13 = new Destinos("Tirana", 355, "../img/tirana.jpg", 13)
-const destino14 = new Destinos("SofÍa", 470, "../img/sofia.jpg", 14)
-const destino15 = new Destinos("Dublin", 500, "../img/dublin.jpg", 15)
-const destino16 = new Destinos("Turin", 420, "../img/turin.jpg", 16)
-const destino17 = new Destinos("Hamburgo", 550, "../img/hamburgo.jpg", 17)
-const destino18 = new Destinos("Mallorca", 610, "../img/Mallorca.jpg", 18)
-const destino19 = new Destinos("Marsella", 650, "../img/marsella.jpg", 19)
-const destino20 = new Destinos("Atenas", 575, "../img/atenas-8.jpg", 20)
-const destino21 = new Destinos("Venecia", 520, "../img/venecia1.jpg", 21)
-const destino22 = new Destinos("Barcelona", 480, "../img/barcelona.jpg", 22)
-const destino23 = new Destinos("Lyon", 540, "../img/lyon.jpeg", 23)
+const flight1 = new Destination("Rome", 500, "./img/ROMA.jpg", 1)
+const flight2 = new Destination("London", 550, "./img/london.jpg", 2)
+const flight3 = new Destination("Paris", 400, "./img/paris.jpg", 3)
+const flight4 = new Destination("Amsterdam", 470, "../img/amsterdam.jpg", 4)
+const flight5 = new Destination("Brussels", 560, "../img/bruselas.jpg", 5)
+const flight6 = new Destination("Viena", 580, "../img/viena.jpg", 6)
+const flight7 = new Destination("Stockholm", 520,"../img/estocolmo.jpg", 7)
+const flight8 = new Destination("Prague", 345, "../img/praga.jpg", 8)
+const flight9 = new Destination("Warsaw", 330, "../img/varsovia.jpg", 9)
+const flight10 = new Destination("Lisbon", 510, "../img/lisboa.jpg", 10)
+const flight11 = new Destination("Oslo", 600, "../img/oslo.jpg", 11)
+const flight12 = new Destination("Madrid", 425, "../img/madrid.jpg", 12)
+const flight13 = new Destination("Tirana", 355, "../img/tirana.jpg", 13)
+const flight14 = new Destination("Sofia", 470, "../img/sofia.jpg", 14)
+const flight15 = new Destination("Dublin", 500, "../img/dublin.jpg", 15)
+const flight16 = new Destination("Turin", 420, "../img/turin.jpg", 16)
+const flight17 = new Destination("Hamburg", 550, "../img/hamburgo.jpg", 17)
+const flight18 = new Destination("Mallorca", 610, "../img/Mallorca.jpg", 18)
+const flight19 = new Destination("Marseille", 650, "../img/marsella.jpg", 19)
+const flight20 = new Destination("Athens", 575, "../img/atenas-8.jpg", 20)
+const flight21 = new Destination("Venice", 520, "../img/venecia1.jpg", 21)
+const flight22 = new Destination("Barcelona", 480, "../img/barcelona.jpg", 22)
+const flight23 = new Destination("Lyon", 540, "../img/lyon.jpeg", 23)
 
 
 
 
-let listaDestinos = [destino1, destino2, destino3, destino4, destino5, destino6, destino7,
-    destino8, destino9, destino10, destino11,destino12,destino13,destino14,destino15, 
-    destino16,destino17,destino18,destino19,destino20, destino21, destino22, destino23];
+let flightList = [flight1, flight2,flight3,flight4,flight5,flight6,flight7,flight8,flight9,flight10,flight11,flight12,
+    flight13, flight14,flight15,flight16,flight17,flight18,flight19,flight20,flight21,flight22,flight23,];
 
-console.log(listaDestinos)
+console.log(flightList)
 
-let ofertaDestinos= [destino9, destino13, destino8];
-console.log(ofertaDestinos)
+let flightOffer = [flight9, flight13, flight8];
+console.log(flightOffer)
 

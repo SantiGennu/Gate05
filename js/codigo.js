@@ -1,42 +1,42 @@
 
-let carrito = []
-let contenedorDestinos = document.getElementById('contenedorDestinos')
-let contenedorCarrito = document.getElementById("contenedorCarrito")
-let cantidadCarrito = document.getElementById("cantidadCarrito")
-let total = document.getElementById("precioTotal")
-let boton = document.getElementById("boton2")
-let contenedorOfertas = document.getElementById("contenedor-ofertas")
+let cart = []
+let containerFlight = document.getElementById('containerFlight')
+let containerCart = document.getElementById("containerCart")
+let quantityCart = document.getElementById("quantityCart")
+let total = document.getElementById("totalPrice")
+let button = document.getElementById("button2")
+let containerOffer = document.getElementById("containerOffer")
 
 
-function mostrarProductos(listaDestinos) {
-    contenedorDestinos.innerHTML = ""
-    listaDestinos.forEach(item => {
+function showFlights(flightList) {
+    containerFlight.innerHTML = ""
+    flightList.forEach(item => {
         let div = document.createElement("div")
-        div.className = "destino col-12 col-md-4 mt-3"
+        div.className = "destination col-12 col-md-4 mt-3"
         div.innerHTML = `<div class="card" style="width: 18rem;">
         <img class="card-img-top" src="${item.img}">
         <div class="card-body">
-        <h4 class="card-title">${item.ciudad} </h4>
-        <p class= "precio">$ ${item.precio}</p>
+        <h4 class="card-title">${item.city} </h4>
+        <p class= "price">$ ${item.price}</p>
         <button id= "${item.id}" class="btn"><span class="material-icons">
         flight_takeoff
         </span></button>
         </div>
         </div>`
-        contenedorDestinos.appendChild(div)
+        containerFlight.appendChild(div)
 
         let button = document.getElementById(`${item.id}`)
         button.addEventListener("click", () => {
             Swal.fire({
                 position: 'top-end',
                 icon: 'success',
-                title: 'Tu destino ha sido agregado al carrito',
+                title: 'Your flight have been added to the Shopping cart',
                 showConfirmButton: false,
-                timer: 1000,
+                timer: 1500,
             })
-            agregarCarrito(item)
+            addToCart(item)
         })
-        mostrarCarrito()
+        showCart()
 
 
 
@@ -44,90 +44,89 @@ function mostrarProductos(listaDestinos) {
     })
 }
 
-mostrarProductos(listaDestinos)
-mostrarOfertas()
-function mostrarOfertas() {
-    ofertaDestinos.forEach(item => {
+showFlights(flightList)
+showOffers()
+function showOffers() {
+    flightOffer.forEach(item => {
         let div = document.createElement("div")
-        div.className = "ofertas col-12 col-md-4 mt-3"
+        div.className = "offers col-12 col-md-4 mt-3"
         div.innerHTML = `<div class="card" style="width: 18rem;">
                                 <img class="card-img-top" src="${item.img}">
                             <div class="card-body">
-                                <h4 class="card-title">${item.ciudad} </h4>
-                                <p class= "precio">$ ${item.precio}</p>
-                                <button id= "${item.id}" class="btn" id="botonProducto"><span class="material-icons">
+                                <h4 class="card-title">${item.city} </h4>
+                                <p class= "price">$ ${item.price}</p>
+                                <button id= "${item.id}" class="btn" id="buttonProduct"><span class="material-icons">
                                 flight_takeoff
                                 </span></button>
                             </div>
                         </div>`
 
-        contenedorOfertas.appendChild(div)
+        containerOffer.appendChild(div)
         let btn = document.getElementById(`${item.id}`)
         btn.addEventListener("click", () => {
             Swal.fire({
                 position: 'top-end',
                 icon: 'success',
-                title: 'Tu destino ha sido agregado al carrito',
+                title: 'Your flight have been added to the Shopping cart',
                 showConfirmButton: false,
-                timer: 1000,
+                timer: 1500,
             })
-            agregarCarrito(item)
+            addToCart(item)
         })
 
     })
 }
 
 
-function agregarCarrito(item) {
+function addToCart(item) {
 
-    let destino = listaDestinos.find(destino => destino.id === item.id)
-    carrito.push(destino)
-    localStorage.setItem("destino", JSON.stringify(carrito))
+    let flight = flightList.find(flight => flight.id === item.id)
+    cart.push(flight)
+    localStorage.setItem("flight", JSON.stringify(cart))
  
 
-    actualizarCarrito()
+    actualizeCart()
   
 }
 
 
-boton.addEventListener("click", mostrarCarrito)
-function mostrarCarrito() {
-    contenedorCarrito.innerHTML = ""
+button.addEventListener("click", showCart)
+function showCart() {
+    containerCart.innerHTML = ""
 
-    if (carrito.length === 0) {
+    if (cart.length === 0) {
         let div = document.createElement("div")
-        div.innerHTML = `<p id ="vacio" >EL CARRITO ESTA VACÍO</p>`
-        contenedorCarrito.appendChild(div)
+        div.innerHTML = `<p id ="empty" >Shopping cart is empty</p>`
+        containerCart.appendChild(div)
     }
     else {
 
-        carrito.forEach(item => {
+        cart.forEach(item => {
             let div = document.createElement("div")
-            div.className = "contenedorCarrito d-flex"
-            div.innerHTML = `<p class="col-6 align-items-end">${item.ciudad}</p>
-                        <p class="col-6 align-items-end">Precio: $${item.precio} 
+            div.className = "containerCart d-flex"
+            div.innerHTML = `<p class="col-6 align-items-end">${item.city}</p>
+                        <p class="col-6 align-items-end">Price: $${item.price} 
                         <button id="booking" class="booking-btn${item.id}"><span class="material-icons">
                         flight_land
                         </span></button></p>
                         <button id="button${item.id}" class="remove-btn"><span class="material-icons" >
                         delete 
                         </span></button>
-                        <div class"contenedorApi"></div>
                         `
 
-            contenedorCarrito.appendChild(div)
-            actualizarCarrito()
+            containerCart.appendChild(div)
+            actualizeCart()
 
 
 
-            const btnEliminar = document.getElementById(`button${item.id}`)
-            btnEliminar.addEventListener("click", () => {
-                btnEliminar.parentElement.remove()
-                carrito.forEach(item => item.id == `button${item.id}`)
-                let index = carrito.indexOf(item)
-                carrito.splice(index, 1)
-                actualizarCarrito()
-                mostrarCarrito()
+            const btnDelete = document.getElementById(`button${item.id}`)
+            btnDelete.addEventListener("click", () => {
+                btnDelete.parentElement.remove()
+                cart.forEach(item => item.id == `button${item.id}`)
+                let index = cart.indexOf(item)
+                cart.splice(index, 1)
+                actualizeCart()
+                showCart()
 
 
             })
@@ -138,48 +137,48 @@ function mostrarCarrito() {
 }
 
 
-function actualizarCarrito() {
-    cantidadCarrito.innerText = carrito.length
-    total.innerText = carrito.reduce((acc, el) => acc + el.precio, 0)
+function  actualizeCart() {
+    quantityCart.innerText = cart.length
+    total.innerText = cart.reduce((acc, el) => acc + el.price, 0)
 }
 
-function filtrarDestino(e) {
-    let destinoFiltrado = listaDestinos.filter(destino => (destino.ciudad).toLowerCase().includes(e.target.value))
-    mostrarProductos(destinoFiltrado)
+function flightFilter(e) {
+    let flightFiltered = flightList.filter(flight => (flight.city).toLowerCase().includes(e.target.value))
+    showFlights(flightFiltered)
     console.log(e.target.value)
 }
-window.addEventListener("keyup", filtrarDestino)
+window.addEventListener("keyup", flightFilter)
 
 
 
 let packContainer = document.getElementById("packContainer")
-function mostrarPack(listaPack) {
+function showPack(PackList) {
     packContainer.innerHTML = ""
-    listaPack.forEach(item => {
+    PackList.forEach(item => {
         let div = document.createElement("div")
         div.className = "modalPack"
         div.innerHTML = `<div class="backgroundPack">
                        
-                             <div img id="background1Spain" src="${item.img1}">
-                                <h3> ${item.ciudad1}</h3> </div>
+                             <div img id="background1" src="${item.img1}">
+                                <h3> ${item.city1}</h3> </div>
                          
                            
-                                 <div img id="background2Spain" src="${item.img2}">
-                                 <h3> ${item.ciudad2}</h3></div>
+                                 <div img id="background2" src="${item.img2}">
+                                 <h3> ${item.city2}</h3></div>
                                  
-                                 <div img id="background3Spain" src="${item.img3}">
-                                 <h3> ${item.ciudad3}</h3></div>
+                                 <div img id="background3" src="${item.img3}">
+                                 <h3> ${item.city3}</h3></div>
                            
                      </div>
                         <div class="contentPack" >
                             <div class="titlePack">
-                            <h1>${item.ciudad}</h1>
+                            <h1>${item.city}</h1>
                             </div>
                             <div class="blockPack">
                                 <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias ab ut perferendis inventore
                                     suscipit, atque temporibus totam voluptatibus doloribus praesentium</P>
                                 <p class="pricePack">
-                                <strong> Only ${item.precio}</strong>
+                                <strong> Only ${item.price}</strong>
                                 </p>
                                 <button id= "btn${item.id}" class="btnReserve" type="button"> RESERVE </button>
                             </div>
@@ -192,24 +191,24 @@ function mostrarPack(listaPack) {
             Swal.fire({
                 position: 'top-end',
                 icon: 'success',
-                title: 'Tu destino ha sido agregado al carrito',
+                title: 'Your flight have been added to the Shopping cart',
                 showConfirmButton: false,
-                timer: 1000,
+                timer: 1500,
             })
-            agregarPack(item)
+            addPack(item)
         })
 
     })
 }
-mostrarPack(listaPack)
+showPack(PackList)
 
-function agregarPack(item) {
+function addPack(item) {
 
-    let countryPack = listaPack.find(destino => destino.id === item.id)
-    carrito.push(countryPack)
-    localStorage.setItem("destino", JSON.stringify(carrito))
+    let countryPack = PackList.find(flight => flight.id === item.id)
+    cart.push(countryPack)
+    localStorage.setItem("pack", JSON.stringify(cart))
 
-    actualizarCarrito()
+    actualizeCart()
   
 
 }
@@ -217,29 +216,6 @@ function agregarPack(item) {
 //FRASES SOBRE VIAJES DE MI ARCHIVO JSON//
 // NECESITO BUSCARLE LA FORMA DE QUE ME LAS IMPRIMA DE MANERA ALEATORIA AL HACER CLICK//
 
-const quote = document.getElementById("quote");
-const author = document.getElementById("author");
-const btn = document.getElementById("btnQuote");
-
-btn.addEventListener("click", getQuote);
-
-function getQuote() {
-    fetch("./quotes.json")
-        .then(response => response.json())
-        .then(result => {
-            let data = result
-            data.forEach(data => {
-                quote.innerHTML = `"${data.content}"`;
-                author.innerHTML = `- ${data.author}`;
-            }
-
-            )
-        }
-        )
-        .catch(error => console.log(error))
-}
-
-            //FRASES FAMOSAS RANDOM//
 // const quote = document.getElementById("quote");
 // const author = document.getElementById("author");
 // const btn = document.getElementById("btnQuote");
@@ -247,10 +223,33 @@ function getQuote() {
 // btn.addEventListener("click", getQuote);
 
 // function getQuote() {
-//   fetch("https://api.quotable.io/random")
-//     .then((response) => response.json())
-//     .then((data) => {
-//       quote.innerHTML = `"${data.content}"`;
-//       author.innerHTML = `- ${data.author}`;
-//     });
+//     fetch("./quotes.json")
+//         .then(response => response.json())
+//         .then(result => {
+//             let data = result
+//             data.forEach(data => {
+//                 quote.innerHTML = `"${data.content}"`;
+//                 author.innerHTML = `- ${data.author}`;
+//             }
+
+//             )
+//         }
+//         )
+//         .catch(error => console.log(error))
 // }
+
+            // FRASES FAMOSAS RANDOM
+const quote = document.getElementById("quote");
+const author = document.getElementById("author");
+const btn = document.getElementById("btnQuote");
+
+btn.addEventListener("click", getQuote);
+
+function getQuote() {
+  fetch("https://api.quotable.io/random")
+    .then((response) => response.json())
+    .then((data) => {
+      quote.innerHTML = `"${data.content}"`;
+      author.innerHTML = `- ${data.author}`;
+    });
+}
