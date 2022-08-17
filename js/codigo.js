@@ -83,10 +83,10 @@ function addToCart(item) {
     let flight = flightList.find(flight => flight.id === item.id)
     cart.push(flight)
     localStorage.setItem("flight", JSON.stringify(cart))
- 
+
 
     actualizeCart()
-  
+
 }
 
 
@@ -106,7 +106,7 @@ function showCart() {
             div.className = "containerCart d-flex"
             div.innerHTML = `<p class="col-6 align-items-end">${item.city}</p>
                         <p class="col-6 align-items-end">Price: $${item.price} 
-                        <button id="booking" class="booking-btn${item.id}"><span class="material-icons">
+                        <button class="booking" id="btn${item.id1}"><span class="material-icons">
                         flight_land
                         </span></button></p>
                         <button id="button${item.id}" class="remove-btn"><span class="material-icons" >
@@ -129,15 +129,39 @@ function showCart() {
                 showCart()
 
 
+
+            })
+            let btnpay = document.getElementById(`btn${item.id1}`)
+            console.log(btnpay)
+            btnpay.addEventListener("click", () => {
+                btnpay.parentElement.remove()
+                cart.forEach(item => item.id1 == `btn${item.id1}`)
+                let index = cart.indexOf(item)
+                cart.splice(index, 1)
+                actualizeCart()
+                showCart()
+
+
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Thank you for trusting us!  Enjoy your travel!!',
+                    showConfirmButton: false,
+                    timer: 2000,
+
+                })
+
             })
 
-
         })
+
+
     }
 }
 
 
-function  actualizeCart() {
+
+function actualizeCart() {
     quantityCart.innerText = cart.length
     total.innerText = cart.reduce((acc, el) => acc + el.price, 0)
 }
@@ -148,7 +172,6 @@ function flightFilter(e) {
     console.log(e.target.value)
 }
 window.addEventListener("keyup", flightFilter)
-
 
 
 let packContainer = document.getElementById("packContainer")
@@ -209,9 +232,10 @@ function addPack(item) {
     localStorage.setItem("pack", JSON.stringify(cart))
 
     actualizeCart()
-  
+
 
 }
+
 
 //FRASES SOBRE VIAJES DE MI ARCHIVO JSON//
 // NECESITO BUSCARLE LA FORMA DE QUE ME LAS IMPRIMA DE MANERA ALEATORIA AL HACER CLICK//
@@ -238,7 +262,7 @@ function addPack(item) {
 //         .catch(error => console.log(error))
 // }
 
-            // FRASES FAMOSAS RANDOM
+// FRASES FAMOSAS RANDOM
 const quote = document.getElementById("quote");
 const author = document.getElementById("author");
 const btn = document.getElementById("btnQuote");
@@ -246,10 +270,12 @@ const btn = document.getElementById("btnQuote");
 btn.addEventListener("click", getQuote);
 
 function getQuote() {
-  fetch("https://api.quotable.io/random")
-    .then((response) => response.json())
-    .then((data) => {
-      quote.innerHTML = `"${data.content}"`;
-      author.innerHTML = `- ${data.author}`;
-    });
+    fetch("https://api.quotable.io/random")
+        .then((response) => response.json())
+        .then((data) => {
+            quote.innerHTML = `"${data.content}"`;
+            author.innerHTML = `- ${data.author}`;
+
+        });
+
 }
