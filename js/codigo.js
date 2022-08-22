@@ -174,6 +174,7 @@ function flightFilter(e) {
 window.addEventListener("keyup", flightFilter)
 
 
+
 let packContainer = document.getElementById("packContainer")
 function showPack(PackList) {
     packContainer.innerHTML = ""
@@ -182,15 +183,20 @@ function showPack(PackList) {
         div.className = "modalPack"
         div.innerHTML = `<div class="backgroundPack">
                        
-                             <div img id="background1" src="${item.img1}">
-                                <h3> ${item.city1}</h3> </div>
-                         
                            
-                                 <div img id="background2" src="${item.img2}">
-                                 <h3> ${item.city2}</h3></div>
+                                <div> 
+                                <img id="background1" src="${item.img1}">
+                        
+                                </div>
+                           
+                                 <div> 
+                                 <img id="background2" src="${item.img2}">
+                                
+                                 </div>
                                  
-                                 <div img id="background3" src="${item.img3}">
-                                 <h3> ${item.city3}</h3></div>
+                                 <div> <img id="background3" src="${item.img3}">
+                                
+                                 </div>
                            
                      </div>
                         <div class="contentPack" >
@@ -198,8 +204,9 @@ function showPack(PackList) {
                             <h1>${item.city}</h1>
                             </div>
                             <div class="blockPack">
-                                <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias ab ut perferendis inventore
-                                    suscipit, atque temporibus totam voluptatibus doloribus praesentium</P>
+                                <P> ${item.city1} </P>
+                                 <P> ${item.city2} </P>
+                                  <P>${item.city3} </P>
                                 <p class="pricePack">
                                 <strong> Only ${item.price}</strong>
                                 </p>
@@ -237,32 +244,6 @@ function addPack(item) {
 }
 
 
-//FRASES SOBRE VIAJES DE MI ARCHIVO JSON//
-// NECESITO BUSCARLE LA FORMA DE QUE ME LAS IMPRIMA DE MANERA ALEATORIA AL HACER CLICK//
-
-// const quote = document.getElementById("quote");
-// const author = document.getElementById("author");
-// const btn = document.getElementById("btnQuote");
-
-// btn.addEventListener("click", getQuote);
-
-// function getQuote() {
-//     fetch("./quotes.json")
-//         .then(response => response.json())
-//         .then(result => {
-//             let data = result
-//             data.forEach(data => {
-//                 quote.innerHTML = `"${data.content}"`;
-//                 author.innerHTML = `- ${data.author}`;
-//             }
-
-//             )
-//         }
-//         )
-//         .catch(error => console.log(error))
-// }
-
-// FRASES FAMOSAS RANDOM
 const quote = document.getElementById("quote");
 const author = document.getElementById("author");
 const btn = document.getElementById("btnQuote");

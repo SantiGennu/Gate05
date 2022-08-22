@@ -266,13 +266,8 @@ ul li a:hover {
 
 .packContainer .modalPack .backgroundPack #background1 {
     height: 100%;
-    display: grid;
-    justify-content: center;
-    width: 33%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    /* background-image: url(../img/madrid.jpg); */
+    width: 100%;
+
 }
 
 .packContainer .modalPack .backgroundPack #background1 h3 {
@@ -283,17 +278,16 @@ ul li a:hover {
     color: black;
     transition: all .5s;
     cursor: default;
+    position: absolute;
+    top: 50%;
 }
 
 .packContainer .modalPack .backgroundPack #background2 {
     height: 100%;
     display: grid;
-    justify-content: center;
-    width: 33%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    /* background-image: url(../img/barcelona.jpg); */
+    width: 100%;
+
+
 }
 
 .packContainer .modalPack .backgroundPack #background2 h3 {
@@ -309,12 +303,9 @@ ul li a:hover {
 .packContainer .modalPack .backgroundPack #background3 {
     height: 100%;
     display: grid;
-    justify-content: center;
-    width: 33%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    /* background-image: url(../img/Mallorca.jpg); */
+    width: 100%;
+
+
 }
 
 .packContainer .modalPack .backgroundPack #background3 h3 {
@@ -368,10 +359,9 @@ ul li a:hover {
 }
 
 .packContainer .modalPack .contentPack .blockPack p {
-    width: 70%;
     color: #FCD900;
-    font-size: 18px;
-    opacity: 80%;
+    font-size: 25px;
+
 
 }
 
@@ -389,131 +379,6 @@ ul li a:hover {
     transition: all .3s;
 }
 
-.packContainer .modalPack .backgroundPack #background1 {
-    height: 100%;
-    display: grid;
-    justify-content: center;
-    width: 33%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-image: url(../img/venecia1.jpg);
-}
-
-.packContainer .modalPack .backgroundPack #background1 h3 {
-    font-weight: 800;
-    margin-top: 50px;
-    font-size: 24px;
-    font-family: 'Poppins';
-    color: black;
-    transition: all .5s;
-    cursor: default;
-}
-
-.packContainer .modalPack .backgroundPack #background2 {
-    height: 100%;
-    display: grid;
-    justify-content: center;
-    width: 33%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-image: url(../img/turin.jpg);
-}
-
-.packContainer .modalPack .backgroundPack #background2 h3 {
-    font-weight: 800;
-    margin-top: 50px;
-    font-size: 24px;
-    font-family: 'Poppins';
-    color: black;
-    transition: all .5s;
-    cursor: default;
-}
-
-.packContainer .modalPack .backgroundPack #background3 {
-    height: 100%;
-    display: grid;
-    justify-content: center;
-    width: 33%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-image: url(../img/ROMA.jpg);
-}
-
-.packContainer .modalPack .backgroundPack #background3y h3 {
-    font-weight: 800;
-    margin-top: 50px;
-    font-size: 24px;
-    font-family: 'Poppins';
-    color: black;
-    transition: all .5s;
-    cursor: default;
-}
-
-.packContainer .modalPack .backgroundPack #background1 {
-    height: 100%;
-    display: grid;
-    justify-content: center;
-    width: 33%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-image: url(../img/paris.jpg);
-}
-
-.packContainer .modalPack .backgroundPack #background1 h3 {
-    font-weight: 800;
-    margin-top: 50px;
-    font-size: 24px;
-    font-family: 'Poppins';
-    color: black;
-    transition: all .5s;
-    cursor: default;
-}
-
-.packContainer .modalPack .backgroundPack #background2 {
-    height: 100%;
-    display: grid;
-    justify-content: center;
-    width: 33%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-image: url(../img/marsella.jpg);
-}
-
-.packContainer .modalPack .backgroundPack #background2 h3 {
-    font-weight: 800;
-    margin-top: 50px;
-    font-size: 24px;
-    font-family: 'Poppins';
-    color: black;
-    transition: all .5s;
-    cursor: default;
-}
-
-.packContainer .modalPack .backgroundPack #background3 {
-    height: 100%;
-    display: grid;
-    justify-content: center;
-    width: 33%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-image: url(../img/lyon.jpeg);
-}
-
-.packContainer .modalPack .backgroundPack #background3 h3 {
-    font-weight: 800;
-    margin-top: 50px;
-    font-size: 24px;
-    font-family: 'Poppins';
-    color: black;
-    transition: all .5s;
-    cursor: default;
-}
 
 .container-quotes {
     margin: 100px auto;
